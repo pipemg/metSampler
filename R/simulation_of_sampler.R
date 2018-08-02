@@ -33,26 +33,13 @@ Matriz1[norm_list2,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) rnorm(n
 Matriz2[norm_list2,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) rnorm(n=1000, mean=sample(1:1000,size = 1), sd=runif(1)*sample(1:100,1) ) ))
 
 
-a=sample(1:1000,size = 50,replace = T)
-b=sample(1:1000,size = 50,replace = T)
+shpe=runif(10,1,100)
 
-Matriz1[nonorm_list1,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) runif(1000,min=min(a[x],b[x]),max=max(a[x],b[x]) )))
-Matriz2[nonorm_list1,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) runif(1000,min=min(a[x],b[x]),max=max(a[x],b[x]) )))
+Matriz1[nonorm_list1,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) rgamma(1000, shape=shpe )*runif(n = 1000,min=1, max=100)))
+Matriz2[nonorm_list1,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) rgamma(1000, shape=shpe )*runif(n = 1000,min=1, max=100)))
 
-
-Matriz1[nonorm_list2,] = do.call(rbind,lapply(seq_len(10),
-                FUN= function(x) {
-                  a=sample(1:1000,size = 1)
-                  b=sample(1:1000,size = 1)
-                  runif(1000,min=min(a,b),max=max(a,b))} 
-                ))
-                
-Matriz2[nonorm_list2,] = do.call(rbind,lapply(seq_len(10),
-                                              FUN= function(x) {
-                                                a=sample(1:1000,size = 1)
-                                                b=sample(1:1000,size = 1)
-                                                runif(1000,min=min(a,b),max=max(a,b))} 
-))
+Matriz1[nonorm_list2,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) rgamma(1000, shape=runif(1,1,100) )*runif(n = 1000,min=1, max=100)))
+Matriz2[nonorm_list2,] = do.call(rbind,lapply(seq_len(10),FUN= function(x) rgamma(1000, shape=runif(1,1,100) )*runif(n = 1000,min=1, max=100)))
 
 
-
+save(Matriz1,Matriz2, file = "sampler_tables.RData")
