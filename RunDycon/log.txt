@@ -1,0 +1,7 @@
+43 reactions missing at least one metabolite
+71 reactions having at least one measured metabolite
+
+Bias correlation
+log-fold: 0.268419
+pval: -0.3093
+
