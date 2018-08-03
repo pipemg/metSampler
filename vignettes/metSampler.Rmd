@@ -4,7 +4,7 @@ author: "Felipe de Jesus Muñoz González, Francisco Romero, Mirna Vazquez, Patr
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{metSampler}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -20,8 +20,12 @@ The package cosists of three modules. The first module, samples two different nu
 _metSampler_ Automatically will load its dependencies. 
 
 
-```{r setup, include = FALSE}
+```{r setup, include = FALSE, eval=FALSE}
 install.packages("metSampler")
+```
+
+```{r load}
+library(metSampler)
 ```
 
 # Runing first module of _metSampler_ package
@@ -29,18 +33,16 @@ install.packages("metSampler")
 In this example to run the first module we will create to matrix and used to run sampler module.  
 
 ```{r}
-
 A <- rbind(c(1,0), c(0,1), c(-1,0), c(0,-1))
 B <- c(1, 1, 0, 0)
-init.sampler(A,B)
-
+init.sampler(t(A),B)
 ```
 
 # Runing second module of _metSampler_ package
 
 In this example we run second module which will performe the distribution comparition of each enzime.
 
-```{r}
+```{r, eval=FALSE}
 distribution_results_distintos(Matriz1, Matriz2)
 distribution_results_iguales(Matriz1, Matriz2)
 ```
