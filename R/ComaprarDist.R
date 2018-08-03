@@ -1,4 +1,3 @@
-#' library(Hitandrun)
 #' @author Felipe de Jesus Muñoz González, Francisco Romero, Mirna Vazquez, Patricia Carvajal
 #' @references https://github.com/ComunidadBioInfo/rbioc18/blob/master/materials/collaborative%20projects/projects_descriptions/04_metaboloma.pdf
 #' @param two dycon matrices
