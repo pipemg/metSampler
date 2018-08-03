@@ -1,8 +1,6 @@
 #' Transform the structure to polygon constraints
 #' @export
 #' 
-#' @keywords flux cone
-#' 
 #' @description 
 #' init.sampler gets a matrix and the right-hand side to estabish the constraints of the flux space
 #' 
@@ -29,7 +27,20 @@ init.sampler<-function(mat, rh, transf=NULL){
   return(constr)
 }
 
-
+#' Transform the structure to polygon constraints
+#' @export
+#' 
+#' @description 
+#' init.sampler gets a matrix and the right-hand side to estabish the constraints of the flux space
+#' 
+#' @author Muñoz-González, Felipe <fmunoz@lcg.unam.mx>
+#' 
+#' @Usage init.sampler(mat,rh, transf=NULL)
+#' @param mat  Is the matrix that represnets the flux cone
+#' @param transf transformation to apply to the matrix 
+#' 
+#' @return constraint structure  
+#' 
 #' @example 
 #'   A <- rbind(c(1,0), c(0,1), c(-1,0), c(0,-1))
 #'   B <- c(1, 1, 0, 0)

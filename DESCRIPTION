@@ -1,10 +1,10 @@
 Package: metSampler
 Type: Package
-Title: metSampler 
-Version: 1.0
+Title: Metabolic Sampler 
+Version: 0.01
 Date: 2018-08-01
-Author: Felipe de Jesus Muñoz González, Francisco Romero, Mirna Vazquez, Patricia Carvajal 
-Maintainer: Felipe de Jesus Muñoz González <fmunoz@lcg.unam.mx>
+Author: Felipe de Jesus Munoz Gonzalez, Francisco Romero, Mirna Vazquez, Patricia Carvajal 
+Maintainer: Felipe de Jesus Munoz Gonzalez <fmunoz@lcg.unam.mx>
 Description: Receives two k-cones from the package Dycon that represent two different null spaces
        from a metabolic constraint based model.
 License: GPL (>= 2)
