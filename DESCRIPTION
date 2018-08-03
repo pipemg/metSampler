@@ -8,7 +8,7 @@ Maintainer: Felipe de Jesus Muñoz González <fmunoz@lcg.unam.mx>
 Description: Receives two k-cones from the package Dycon that represent two different null spaces
        from a metabolic constraint based model.
 License: GPL (>= 2)
-Imports: Hit and Run
+Imports: hitandrun
 LinkingTo: 
 Suggests: knitr,
     rmarkdown,
