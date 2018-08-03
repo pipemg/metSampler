@@ -1,9 +1,12 @@
 #' library(Hitandrun)
 #' @author Felipe de Jesus Muñoz González, Francisco Romero, Mirna Vazquez, Patricia Carvajal
 #' @references https://github.com/ComunidadBioInfo/rbioc18/blob/master/materials/collaborative%20projects/projects_descriptions/04_metaboloma.pdf
-#' @param two dycon matrix
+#' @param two dycon matrices
 #' @export
-#' @examples   
+#' @examples
+#' 
+#' distribution_results_distintos(Matriz1, Matriz2)
+#' distribution_results_iguales(Matriz1, Matriz2)
 
 
 #Vamos a correr el test para todas las lineas
